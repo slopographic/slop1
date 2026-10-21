@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Snippet Expander",
+  "version": "1.0.0",
+  "description": "Type a short trigger like po1, then Space, Enter or Tab, to expand it into a full snippet.",
+  "permissions": ["storage"],
+  "background": {
+    "service_worker": "src/background/worker.js"
+  },
+  "action": {
+    "default_title": "Snippet Expander settings"
+  },
+  "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "all_frames": true,
+      "js": [
+        "src/shared/snippets.js",
+        "src/content/target.js",
+        "src/content/expander.js"
+      ]
+    }
+  ]
+}

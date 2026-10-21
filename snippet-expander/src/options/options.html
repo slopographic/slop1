@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Snippet Expander</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <h1>Snippet Expander</h1>
+    <p class="hint">
+      Type a trigger such as <code>po1</code>, then press <kbd>Space</kbd>, <kbd>Enter</kbd> or
+      <kbd>Tab</kbd> to expand it. Use <code>{date}</code> to insert today's date.
+    </p>
+
+    <div id="list"></div>
+
+    <div class="footer">
+      <button id="add" type="button">+ Add snippet</button>
+      <div class="save-area">
+        <span id="status" role="status"></span>
+        <button id="save" type="button">Save</button>
+      </div>
+    </div>
+
+    <script src="../shared/snippets.js"></script>
+    <script src="render.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

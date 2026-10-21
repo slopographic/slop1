@@ -1,0 +1,87 @@
+:root {
+  --border: #d4d4d8;
+  --muted: #71717a;
+  --ok: #15803d;
+  --error: #b91c1c;
+}
+
+body {
+  font: 15px/1.4 system-ui, sans-serif;
+  color: #18181b;
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+h1 {
+  font-size: 22px;
+  margin: 0 0 8px;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+code,
+kbd {
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+}
+
+.snippet {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.snippet .row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.snippet .trigger {
+  font: inherit;
+  padding: 6px 8px;
+  width: 220px;
+}
+
+.snippet .text {
+  font: inherit;
+  padding: 6px 8px;
+  width: 100%;
+  min-height: 90px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+button {
+  font: inherit;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.save-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#status {
+  color: var(--ok);
+}
+
+#status.error {
+  color: var(--error);
+}
